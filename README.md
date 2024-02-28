@@ -20,7 +20,7 @@ check your bot status automatically using userbot, simply and easy.
 
 ##### Tap the Deploy To Heroku button below to deploy straight to Heroku!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LoveFeelingsWill/Status)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dilop121/Stats)
 
 ### The Hard Way
 
