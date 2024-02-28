@@ -22,7 +22,7 @@ MESSAGE_ID = int(os.getenv("MESSAGE_ID"))
 TIME_ZONE = os.getenv("TIME_ZONE", "Asia/Kolkata")
 LOG_ID = int(os.getenv("LOG_ID"))
 CHECKING_TIME_MIN = int(os.getenv("CHECKING_TIME_MIN", "60"))
-CHANNEL_NAME = "Solo Tree"
+CHANNEL_NAME = "dil "
 
 async def main():
     print("Status Checker Bot Started, Dont Forgot To Visit @InflexSupport.")
@@ -54,6 +54,18 @@ async def main():
             TEXT += f"\n\n**𝖫𝖺𝗌𝗍 𝖢𝗁𝖾𝖼𝗄𝖾𝖽 𝖮𝗇 :**\n**𝖣𝖺𝗍𝖾 :** {date}\n**𝖳𝗂𝗆𝖾 :** {time}\n\n"
 
             # Edit the message with the new text and keyboard
+
+keyboard = [
+                [
+                    InlineKeyboardButton("𝖴𝗉𝖽𝖺𝗍𝖾𝗌", url=SUPPORT_CHANNEL),
+                    InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍", url=SUPPORT_GROUP),
+                ]
+            ]
+
+            reply_markup = InlineKeyboardMarkup(keyboard)            
+
+            
+            
             await app.edit_message_text(int(CHANNEL_ID), MESSAGE_ID, TEXT, reply_markup=reply_markup)
 
             await asyncio.sleep(120)
