@@ -68,8 +68,8 @@ reply_markup = InlineKeyboardMarkup(keyboard)
 
             
             
-            await app.edit_message_text(int(CHANNEL_ID), MESSAGE_ID, TEXT, reply_markup=reply_markup)
+await app.edit_message_text(int(CHANNEL_ID), MESSAGE_ID, TEXT, reply_markup=reply_markup)
 
-            await asyncio.sleep(120)
+await asyncio.sleep(120)
 
 app.run(main())
