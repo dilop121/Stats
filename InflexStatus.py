@@ -56,20 +56,17 @@ async def main():
             TEXT += f"\n\n**𝖫𝖺𝗌𝗍 𝖢𝗁𝖾𝖼𝗄𝖾𝖽 𝖮𝗇 :**\n**𝖣𝖺𝗍𝖾 :** {date}\n**𝖳𝗂𝗆𝖾 :** {time}\n\n"
 
             # Edit the message with the new text and keyboard
-
-keyboard = [
+            
+            keyboard = [
                 [
                     InlineKeyboardButton("𝖴𝗉𝖽𝖺𝗍𝖾𝗌", url=SUPPORT_CHANNEL),
                     InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍", url=SUPPORT_GROUP),
                 ]
             ]
-
-reply_markup = InlineKeyboardMarkup(keyboard)            
-
+            reply_markup = InlineKeyboardMarkup(keyboard)                        
             
-            
-await app.edit_message_text(int(CHANNEL_ID), MESSAGE_ID, TEXT, reply_markup=reply_markup)
+            await app.edit_message_text(int(CHANNEL_ID), MESSAGE_ID, TEXT, reply_markup=reply_markup)
 
-await asyncio.sleep(120)
+            await asyncio.sleep(120)
 
 app.run(main())
